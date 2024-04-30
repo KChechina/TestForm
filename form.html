@@ -3,9 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Subscription</title>
 </head>
 <body>
-    
+    <header class="page__header">
+        <div class="header_logo">
+            <img src="img/logo_darkbackground.svg" alt="logo">
+        </div>
+        <nav class="header_menu"></nav>
+        <div class="user">
+            <img class="user_icon" src="img/Object.svg" alt="user_icon">
+            <a href="#"><img class="user_menu" src="img/arrow_select_gray.svg" alt="arrow"></a>
+        </div>
+    </header>
+    <main class="page__content">
+        <form class="content_form" action="" method="post">
+            <h1 class="form_title">Редактирование подписки</h1>
+            <div class="form_block">
+                <div class="form_block_theme">
+                    <label for="theme_field" class="field_label">Тема</label>
+                    <select class="theme_field block_field" name="theme" id="theme_field">
+                        <option class="option_item" value="theme1">ИА тема</option>
+                        <option class="option_item" value="theme2"></option>
+                    </select>
+                </div>
+                <div class="form_block_email">
+                    <div class="labelblock">
+                        <label class="field_label" for="email_field">E-mail</label>
+                        <p class="field_label">Можно ввести несколько email через запятую (не более 20)</p>    
+                    </div>
+                    <textarea class="email_field block_field" name="email" id="email_field" cols="30" rows="10" placeholder="n.a.kaliberda@gmail.com, alekshikari@gmail.com"></textarea>
+                </div>
+            </div>
+            <div class="form_block">
+                <fieldset class="form_block_recieve">
+                    <legend class="field_label" for="receive_field">Получать</legend>
+                    <div class="inputs_receive">
+                        <div class="inputs_receive-item">
+                            <input type="radio" name="receive" id="new_message">
+                            <label class="input_label" for="new_message">Новые сообщения</label>
+                        </div>
+                        <div class="inputs_receive-item"> 
+                            <input type="radio" name="receive" id="report">
+                            <label class="input_label" for="report">Отчет</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form_block_timeplate">
+                    <div class="timeplate_period tmp_item">
+                        <label for="period_field" class="field_label">Периодичность</label>
+                        <select class="timeplate_field block_field" name="period" id="period_field">
+                            <option class="option_item" value="1">Раз в месяц</option>
+                            <option class="option_item" value="2">Раз в неделю</option>
+                            <option class="option_item" value="3">Каждый день</option>
+                        </select>
+                    </div>
+                    <div class="timeplate_date tmp_item">
+                        <p class="date_field field_label">Время получения (UTC+3)</p>
+                        <div class="select_time">
+                            <select class="date_field block_field" name="hour" id="date_field">
+                                <option class="option_item" value="00">00 ч.</div></option>
+                                <option class="option_item" value="01">01 ч.</div></option>
+                                <option class="option_item" value="02">02 ч.</div></option>
+                                <option class="option_item" value="03">03 ч.</div></option>
+                                <option class="option_item" value="04">04 ч.</div></option>
+                                <option class="option_item" value="05">05 ч.</div></option>
+                                <option class="option_item" value="06">06 ч.</div></option>
+                                <option class="option_item" value="07">07 ч.</div></option>
+                                <option class="option_item" value="08">08 ч.</div></option>
+                                <option class="option_item" value="09">09 ч.</div></option>
+                                <option class="option_item" value="10">10 ч.</div></option>
+                                <option class="option_item" value="11">11 ч.</div></option>
+                                <option class="option_item" value="12">12 ч.</div></option>
+                                <option class="option_item" value="13">13 ч.</div></option>
+                                <option class="option_item" value="14">14 ч.</div></option>
+                                <option class="option_item" value="15">15 ч.</div></option>
+                                <option class="option_item" value="16">16 ч.</div></option>
+                                <option class="option_item" value="17">17 ч.</div></option>
+                                <option class="option_item" value="18">18 ч.</div></option>
+                                <option class="option_item" value="19">19 ч.</div></option>
+                            </select>
+                            <select class="date_field block_field" name="minutes" id="date_field">
+                                <option class="option_item" value="00">00 мин.</div></option>
+                                <option class="option_item" value="05">05 мин.</div></option>
+                                <option class="option_item" value="10">10 мин.</div></option>
+                                <option class="option_item" value="15">15 мин.</div></option>
+                                <option class="option_item" value="20">20 мин.</div></option>
+                                <option class="option_item" value="25">25 мин.</div></option>
+                                <option class="option_item" value="30">30 мин.</div></option>
+                                <option class="option_item" value="35">35 мин.</div></option>
+                                <option class="option_item" value="40">40 мин.</div></option>
+                                <option class="option_item" value="45">45 мин.</div></option>
+                                <option class="option_item" value="50">50 мин.</div></option>
+                                <option class="option_item" value="55">55 мин.</div></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form_block">
+                <div class="form_block_format">
+                    <fieldset class="format_field">
+                        <legend class="field_legend">Формат</legend>
+                        <div class="format_options">
+                            <div class="format_item">
+                                <input class="format_button hidden_buttons" type="radio" name="format" class="format_input" id="excel">
+                                <label for="excel" class="format_button-label">
+                                    <img src="img/icon42_csv copy.svg" alt="excel"> <p>Excel</p>
+                                </label>
+                            </div>
+                            <div class="format_item">
+                                <input class="format_button hidden_buttons" type="radio" name="format" class="format_input" id="docx">
+                                <label for="docx" class="format_button-label">
+                                    <img src="img/icon42_csv copy-2.svg" alt="docx"> <p>Word</p>
+                                </label>
+                            </div>
+                            <div class="format_item">
+                                <input class="format_button hidden_buttons" type="radio" name="format" class="format_input" id="pdf">
+                                <label for="pdf" class="format_button-label">
+                                    <img src="img/icon42_csv copy 2.svg" alt="pdf"> <p>Pdf</p>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="title_field ">
+                        <label class="field_label" for="title_field" >Заголовок</label>
+                        <input class="form_field block_field" type="text" id="title_field" placeholder="Отчет">
+                    </div>
+                    <div class="title_field">
+                        <label class="field_label" for="subtitle_field" >Подзаголовок</label>
+                        <input class="form_field block_field" type="text" id="subtitle_field" placeholder="Анализ упоминаний в социальных медиа">
+                    </div>
+                </div>
+            </div>
+            <div class="form_block">
+                <fieldset class="filter_field">
+                    <legend class="field_legend">Фильтр данных для отчета</legend>
+                    <div class="filter_inputs">
+                        <div class="filter_item">
+                            <input class="filter_button hidden_buttons" type="radio" name="filter" id="all_theme">
+                            <label class="filter_button_label" for="all_theme">Вся тема</label>
+                        </div>
+                        <div class="filter_item">
+                            <input class="filter_button hidden_buttons" type="radio" name="filter" id="tags">
+                            <label class="filter_button_label" for="tags">Выбранные теги</label>
+                        </div>
+                        <div class="filter_item">
+                            <input class="filter_button hidden_buttons" type="radio" name="filter" id="personal_filters">
+                            <label class="filter_button_label" for="personal_filters">Выбранные персональные фильтры</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form_block">
+                <fieldset class="check_field">
+                    <legend class="field_legend">Состав данных</legend>
+                    <div class="check_list">
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="summary" disabled checked>
+                            <label class="check_label" for="summary">Сводные данные</label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="mention" checked>
+                            <label class="check_label label_box" for="mention">Упоминания
+                                <select class="check_box_option" name="" id="mention_list">
+                                    <option value="full_text">с полным текстом</option>
+                                </select>
+                                <p class="check_label">(максимум 20 000)</p>
+                            </label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="tone">
+                            <label class="check_label" for="tone">Тональность</label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="source" checked>
+                            <label class="check_label" for="source">Источники</label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="author">
+                            <label class="check_label" for="author">Авторы</label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="community">
+                            <label class="check_label" for="community">Сообщества</label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="geo">
+                            <label class="check_label" for="geo">География</label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="tag" checked>
+                            <label class="check_label" for="tag">Теги</label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="links">
+                            <label class="check_label" for="links">Ссылки</label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="popular_words" checked>
+                            <label class="check_label" for="popular_words">Популярные слова</label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="person">
+                            <label class="check_label" for="person">Персоны</label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="legal">
+                            <label class="check_label" for="legal">Юридические лица</label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="spot">
+                            <label class="check_label" for="spot">Места</label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="product">
+                            <label class="check_label" for="product">Продукты</label>    
+                        </div>
+                        <div class="check_list_item">
+                            <input type="checkbox" name="" id="compare">
+                            <label class="check_label" for="compare">Сравнение с конкурентами</label>    
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="lang_field">
+                    <p class="field_label">Язык</p>
+                    <div class="lang_options">
+                        <div>                        
+                            <input type="radio" name="lang" id="ru">
+                            <label class="lang_label" for="ru">Русский</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="lang" id="en" checked>
+                            <label class="lang_label" for="en">Английский</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="toggle">
+                <div class="switch">
+                    <input id="slider" type="checkbox">
+                    <span class="slider round"></span>
+                </div>
+                <label for="slider">Подписка активна</label>
+            </div>
+            <button class="submit_btn" type="submit" formtarget="_self">Сохранить изменения</button>
+        </form>
+    </main>
+    <footer>
+        <div class="footer__content">
+            <a href="#">Написать в техподдержку</a>
+            <p>© 2012-2024 Brand Analytics</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
