@@ -40,6 +40,21 @@ input, textarea, button, select {
     font-size: inherit;
     color: inherit;
     background-color: transparent;
+    appearance: none;
+}
+select:not([multiple]) {
+    padding-right: 1.2em;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 0.5em) 1em;
+    background-size: 0.85em auto;
+    background-image: url("img/arrow_select_gray.svg");
+}
+select.check_box_option:not([multiple]) {
+    padding-right: 1.2em;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 0.1em) 0.5em;
+    background-size: 0.85em auto;
+    background-image: url("img/arrow_select_gray.svg");
 }
 input::-ms-clear {
 	display: none;
@@ -82,7 +97,6 @@ legend {
 .page__header{
     display: flex;
     justify-content: space-between;
-    /*align-items: center;*/
     padding: 0 20px;
 }
 .user{
