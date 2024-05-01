@@ -35,11 +35,13 @@ img, svg {
 address {
     font-style: normal;
 }
-input, textarea, button, select {
+input, textarea, button {
 	font-family: inherit;
     font-size: inherit;
     color: inherit;
     background-color: transparent;
+}
+select{
     appearance: none;
 }
 select:not([multiple]) {
