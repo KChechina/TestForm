@@ -107,6 +107,9 @@ legend {
     align-items: baseline;
     padding-top: 14px;
 }
+.user_icon{
+    border-radius: 50%;
+}
 .page__content{
     background-color: #F5F7FA;
     padding: 0 280px 0 220px;
