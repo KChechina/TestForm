@@ -212,7 +212,7 @@ select, .block_field{
     transform: translateY(-7px);
     transition: 0.5s;
 }
-.format_button:checked ~ label{
+.format_button:checked + label{
     background-color: #D8E4F9;
     padding: 8px;
     border-radius: 5px;
@@ -240,7 +240,7 @@ select, .block_field{
     border-radius: 10px;
     transition: 0.5s;
 }
-.filter_button:checked ~ label{
+.filter_button:checked + label{
     background: #5B85CE;
     color: #FFFFFF;
     padding: 2px 10px 4px;
